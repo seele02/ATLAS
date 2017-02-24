@@ -8,4 +8,4 @@ CONFIGFILE="env.cfg"
 #echo "Config for the target host: $cool_host" >&2
 
 
-$HOME/ATLAS/start_flightgear.sh & $HOME/ATLAS/start_MAV.sh && fg
+$HOME/ATLAS/start_flightgear.sh & $HOME/ATLAS/start_MAV.sh
