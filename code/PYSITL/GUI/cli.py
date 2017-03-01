@@ -72,29 +72,36 @@ class Menu(object):
             return self._iterate_choices()  # recursive module call
 
 
-class ChoiceFunctionLink(dict):
-    def __init__(self, num_choice_dict, **kwargs):
-        super(ChoiceFunctionLink, self).__init__(**kwargs)
+class ChoiceFunctionLink(object):
+    def __init__(self, num_choice_dict):
+
         self.num_choice_dict = dict(num_choice_dict)
         self.choice_function_dict = dict()
 
-        print self.num_choice_dict.itervalues()
+        #print self.num_choice_dict.itervalues()
 
-    def add_link(self, value, function, *args):
+    def link_function(self, value, function, *args):
+
         if self.in_dict(value):
-            print 'DO'
             #runs the function using additional args
-            fun = function
+            link = LinkFunction(function, *args)
+            self.choice_function_dict[value] = link
+            #Execute Function with arguments
+            #functioncp(*argscp)
 
-            print fun, " : ", args
-            fun(*args)
-
-            print args
-            #fun(args[0], args[1], args[2])
-            #self.choice_function_dict[value] =
         else:
             print 'Given Choice option is invalid'
 
+
+    def funtion_excecute(self, value):
+        if self.in_dict(value):
+            test = LinkFunction(self.choice_function_dict[value]).function
+            print 'Executing: ', test
+            test.execute()
+
+
+        else:
+            print 'Given Choice option is not in queue'
 
 
 
@@ -107,8 +114,36 @@ class ChoiceFunctionLink(dict):
 
 
 
+class LinkFunction(object):
+    def __init__(self, function, *args):
+        self.function = function
+        self.args = args
 
-#t = Menu('Main Menu', choice_array=["Compute", "Storage", "AWS Monitor", "Elastic Load Balancing"])
+    def get_value_pair(self):
+        val_dict = dict()
+        val_dict[self.function] = self.args
+        return val_dict
+
+    def get_function(self):
+        return self.function
+
+    def get_args(self):
+        return self.args
+
+    def execute(self):
+        this_args = self.args
+        self.function(*this_args)
+
+    def __str__(self):
+        string = self.get_value_pair()
+        return string.__str__()
+
+
+
+
+
+
+t = Menu('Main Menu', choice_array=["Compute", "Storage", "AWS Monitor", "Elastic Load Balancing"])
 #t._iterate_choices() #Already in __init__(), DON'T CALL MANUALLY ! ! !
 
 new_dict = dict()
@@ -120,7 +155,14 @@ new_dict[4] = 'Elastic Load Balancing'
 
 c = ChoiceFunctionLink(new_dict)
 import solo_connect
+#import MyTestCases as UAVClass
 
 
-c.add_link('Storage', solo_connect.connect().ip, '127.0.0.1', '14550', 5)
+c.link_function('Storage', solo_connect.connect().ip, '127.0.0.1', '14550', 5)
+c.link_function('Compute', solo_connect.connect().get_test, 'My Test')
+#c.link_function('Compute', UAVClass.UAV)
 print c.choice_function_dict
+#c.funtion_excecute('Storage')
+c.funtion_excecute('Compute')
+
+

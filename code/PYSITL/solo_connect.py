@@ -30,6 +30,7 @@ class connect:
         except socket.error as e:
             self.__set_message('Error(1): Unable to connect to Server')
             self.__set_exceptions(Exception(e))
+            raise
 
 
         # Bad TTY connection
@@ -37,12 +38,14 @@ class connect:
 
             self.__set_message('Error(2): Unable to connect to serial Port')
             self.__set_exceptions(Exception(e))
+            raise
 
 
         # API Error
         except dronekit.APIException as e:
             self.__set_message('Error(3): MAVLink Connection Timeout')
             self.__set_exceptions(Exception(e))
+            raise
 
 
 
@@ -50,6 +53,7 @@ class connect:
         except:
             self.__set_message('Some other error!')
             self.__set_exceptions('???')
+            raise
 
 
         return vehicle
@@ -100,3 +104,7 @@ class connect:
 
     def get_exceptions(self):
         return self.__exceptions
+
+    def get_test(self, my_test):
+        print 'EXECUTION SCRIPT INIT!!'
+        return my_test

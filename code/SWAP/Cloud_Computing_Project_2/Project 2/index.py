@@ -15,20 +15,21 @@ def iterate_choices(choice_array):
 
 
 def main_menu():
-    banner_display("\t\t\t\tMain")
+    banner_display("\t\t\t  ATLAS Main")
     choice_array = ["<EXIT>",
-                    "Compute",
-                    "Storage",
-                    "AWS Monitor",
-                    "Elastic Load Balancing",
+                    "UAV",
+                    "Sensor",
+                    "Server",
+                    "MAVLink",
                     ] #create an array of user choices
     choice = iterate_choices(choice_array) #call the choice iterator with the array as an argument
     if choice == 0:
         exit() #exit the program
     elif choice == 1:
-        sub_menu("compute") #call the AWS/OpenStack chooser an 'origin' option is added so later itterations know which method to call
+        #sub_menu("UAV") #call the AWS/OpenStack chooser an 'origin' option is added so later itterations know which method to call
+        UAV_menu()
     elif choice == 2:
-        sub_menu("storage") #call the AWS/OpenStack chooser
+        sub_menu("Sensor") #call the AWS/OpenStack chooser
     elif choice == 3:
         monitor_AWS() #calls monitoring module
     elif choice == 4:
@@ -40,29 +41,30 @@ def sub_menu(origin):
     choice = iterate_choices(choice_array)
     if choice == 0:
         main_menu() #goes back to originating method
-    if origin == "compute": #if the origin parameter is from compute section
+    if origin == "UAV": #if the origin parameter is from compute section
         if choice == 1:
-            compute_AWS() #AWS compute method
+            UAV_menu() #AWS compute method
         elif choice == 2:
             compute_openstack() #openstack compute method
-    elif origin == "storage": #if the origin parameter is from compute section
+    elif origin == "Sensor": #if the origin parameter is from compute section
         if choice == 1:
             storage_AWS() #AWS storage method
         elif choice == 2:
             storage_openstack() #openstack torage method
 
-def compute_AWS():
+def UAV_menu():
     print "\n\n*************************************\n" \
               "               AWS Compute" \
               "\n*************************************"
 
-    choice_array = ["<BACK>", "List all Running Instances", "See Info on Specific Index",
-                           "Start a stopped Instance", "Stop all Instances", "Stop running Instance",
+    choice_array = ["<BACK>", "List all Connected Vehicles", "View Vehicle Info",
+                           "Connect New Vehicle", "Stop all Instances", "Stop running Instance",
                            "Attach existing volume", "Detach volume", "Launch new instance"]
     choice = iterate_choices(choice_array)
     #ec2inst = EC2Instance() #Create a new EC2Instance
     if choice == 0:
-        sub_menu("compute") #Calls previous method (shows necesity of origin argument)
+        #sub_menu("compute") #Calls previous method (shows necesity of origin argument)
+        main_menu()
     elif choice == 1:
         print '\n*****Running Instances*****'
         #ec2inst.list_instances(True) #calls the list_instance function in the ec2Instance (True Argument is for verbosity option, explained later)
@@ -87,7 +89,7 @@ def compute_AWS():
     elif choice == 8:
         pass
         #ec2inst.start_new_instance()
-    compute_AWS()
+    UAV_menu()
 
 
     '''Rest of class is pretty much self explanitory/repeated'''
