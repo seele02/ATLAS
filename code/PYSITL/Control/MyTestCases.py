@@ -3,19 +3,65 @@ import time
 from dronekit import connect
 from dronekit import VehicleMode
 import dronekit
+from pymavlink import mavutil
+
 from solo_connect import connect as solo_connect
 
 class UAV(object):
     def __init__(self):
-        self.height = 50
-        self.mode = None
-        self.vehicle = self.conn()
+        self.height = None
+        self._mode = None
+        self._vehicle = None
+        self._veh_ip = None
+        self._veh_port = None
+        self._veh_timeout = None
+
+    def default_setup(self):
+        self.ip = '127.0.0.1'
+        self.port = '14550'
+        self.timeout= 5
+
+    @property
+    def vehicle(self):
+        return self._vehicle
+
+    @vehicle.setter
+    def vehicle(self, connection_type):
+        if connection_type == 'default':
+            self.default_setup()
+        self.vehicle = self.get_conn(self.ip, self.port, self.timeout)
 
 
-    def conn(self):
+    @property
+    def ip(self):
+        return self._veh_ip
+
+    @ip.setter
+    def ip(self, ip):
+        self._veh_ip = ip
+
+    @property
+    def port(self):
+        return self._veh_port
+
+    @port.setter
+    def port(self, port):
+        self._veh_port = port
+
+
+    @property
+    def timeout(self):
+        return self._veh_timeout
+
+    @timeout.setter
+    def timeout(self, time_in_seconds):
+        assert isinstance(time_in_seconds, int)
+        self._veh_timeout = time_in_seconds
+
+    def get_conn(self, ip, port, timeout):
         veh_conn = solo_connect()
         try:
-            vehicle = veh_conn.ip('127.0.0.1', '14550', 5)
+            vehicle = veh_conn.ip(ip, port, timeout)
         except:
             print 'CAUGHT!'
             raise
@@ -38,13 +84,17 @@ class UAV(object):
 
 
 
+    @property
+    def mode(self):
+        return self._mode
 
-    def setMode(self, mode_string):
+    @mode.setter
+    def mode(self, mode_string):
 
         if self.vehicle:
             old_mode = self.vehicle.mode
             self.vehicle.mode = VehicleMode(str(mode_string))
-            self.mode = VehicleMode(str(mode_string))
+            self._mode = VehicleMode(str(mode_string))
             if self.vehicle.mode == self.mode:
                 if self.vehicle.mode != old_mode:
                     print 'MODE CHANGED TO', mode_string, ' from ', old_mode.name
@@ -67,6 +117,8 @@ class UAV(object):
             return False
         else:
             return True
+
+
 
 
 
@@ -136,12 +188,25 @@ class takeoff():
 
 
 
+new_UAV = UAV()
+vehicle = new_UAV.vehicle
 
+print new_UAV.ip
+print new_UAV.port
+print new_UAV.timeout
 
-
-t = UAV()
+new_UAV.mode = vehicle.mode
+print new_UAV
 #t.start_SITL()
-#t.conn()
+#vehicle = new_UAV.vehicle
+#cmds = vehicle.commands
+#cmds.add(
+    #dronekit.Command(0, 0, 0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0, 0, 0, 0, 0, 0, 0, 0, 10))
+
+#point1 = get_location_metres(aLocation, aSize, -aSize)
+
+#print cmds.count
+#cmds.clear()
 #t.setMode('GUIDED')
 #t.arm_vehicle()
 

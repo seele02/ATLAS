@@ -3,9 +3,14 @@ def iterate_choices(choice_array):
     for index in range(len(choice_array)):  #for each index in the choice_array argument
         print str(index) + '. ' + choice_array[index] #print the index as a sting and the corresponding index of the choice array
     user_choice = raw_input("Type the number the corresponds to the process that you would like to complete from the list above: ") #store the raw_input(as opposed to input which doesn't always store as a string) as user_choice
+    print user_choice
     try: #try block
         if(int(user_choice)<len(choice_array)): #if user_choice(onverted to an integer) is out of the bounds of the array
-            return int(user_choice) #return user_choice as an integer
+            if (int(user_choice) >= int(0)):  # if user_choice(onverted to an integer) is out of the bounds of the array
+                return int(user_choice) #return user_choice as an integer
+            else:
+                print "\n[ *****Number Chosen Must be Greater than 0***** ]\n"
+                return iterate_choices(choice_array)  # recursive module call
         else:
             print "\n[ *****Number Chosen Out of Bounds***** ]\n"
             return iterate_choices(choice_array) #recursive module call
@@ -23,6 +28,7 @@ def main_menu():
                     "MAVLink",
                     ] #create an array of user choices
     choice = iterate_choices(choice_array) #call the choice iterator with the array as an argument
+    print choice
     if choice == 0:
         exit() #exit the program
     elif choice == 1:

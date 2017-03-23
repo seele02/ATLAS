@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d48074-bd66-4f5f-8110-f4906478447a" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/MyTestCases.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../ardupilot" afterPath="$PROJECT_DIR$/../../ardupilot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GUI/cli.py" afterPath="$PROJECT_DIR$/GUI/cli.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solo_connect.py" afterPath="$PROJECT_DIR$/solo_connect.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SWAP/Cloud_Computing_Project_2/Project 2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../SWAP/Cloud_Computing_Project_2/Project 2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../SWAP/Cloud_Computing_Project_2/Project 2/index.py" afterPath="$PROJECT_DIR$/../SWAP/Cloud_Computing_Project_2/Project 2/index.py" />
     </list>
     <ignored path="PYSITL.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -492,7 +486,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32964602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28314918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-33" y="311" width="1600" height="805" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28314918" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="-33" y="311" width="1600" height="805" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />

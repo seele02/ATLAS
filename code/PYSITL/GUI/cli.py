@@ -1,7 +1,7 @@
 '''
 Description: Displays choices generated from array of sting args
-
 '''
+from code.PYSITL import Singleton
 
 class Menu(object):
     def __init__(self, banner, choice_array):
@@ -13,10 +13,21 @@ class Menu(object):
         self.banner_display = banner
         self.choice_array = self.get_choice_array()
         self.print_display_banner()
-        choice = self._iterate_choices()
-        print '[ USER CHOICE: ', choice, ' ]'
+        self.choice = self._iterate_choices()
+        self.single = None
+        self._set_zero_val()
 
-        if int(choice) == 0:
+        print '[ USER CHOICE: ', self.choice, ' ]'
+
+        if (self.choice == 1):
+            s = Sub_Menu("UAV", choice_array=["Get Home Location", "Telemetry", "Database", "Etc."])
+
+    def add_sing(self, single):
+        if not self.single:
+            self.single = single
+
+    def _set_zero_val(self):
+        if int(self.choice) == 0:
             print '[ EXITING ]'
             exit()
 
@@ -50,26 +61,52 @@ class Menu(object):
             str(self.banner_display), \
             "\n*************************************"
 
+
     def _iterate_choices(self):
         for key, value in self.key_val_choice.iteritems():  # for each index in the choice_array argument
             # print the index as a sting and the corresponding index of the choice array
             print str(key) , '. ' , str(value)
 
         # store the raw_input(as opposed to input which doesn't always store as a string) as user_choice
-        user_choice = raw_input(
-            "Type the number the corresponds to the process that you would like to complete from the list above: ")
+        user_choice = raw_input("Type the number the corresponds to the process that you"
+                                " would like to complete from the list above: ")
 
         try:  # try block
             # if user_choice(onverted to an integer) is out of the bounds of the array
             if (int(user_choice) < self.get_choice_count()+1):
-                # return user_choice as an integer
-                return int(user_choice)
+                if (int(user_choice) >= int(0)):  # if user_choice(onverted to an integer) is out of the bounds of the array
+                    return int(user_choice)  # return user_choice as an integer
+                else:
+                    print "\n[ *****Number Chosen Must be Greater than 0***** ]\n"
+                    return self._iterate_choices()  # recursive module call
             else:
                 print "\n[ *****Number Chosen Out of Bounds***** ]\n"
                 return self._iterate_choices()  # recursive module call
         except (IndexError, ValueError):  # catch Index out of bounds & Non-numeric value
             print "\n[ *****Please select a valid number***** ]\n"
             return self._iterate_choices()  # recursive module call
+
+
+class Sub_Menu(Menu):
+    def __init__(self, banner, choice_array):
+        super(Sub_Menu, self).__init__(banner, choice_array)
+        #self.parent_menu = parent_menu
+        self.set_choice_numbering()
+        self._set_zero_val()
+
+    def set_choice_numbering(self):
+        self.key_val_choice[0] = 'BACK'
+        for index in range(self.get_choice_count()):
+            self.key_val_choice[index + 1] = self.choice_array[index]
+
+    def _set_zero_val(self):
+        if int(self.choice) == 0:
+            print '[ Go Back ]'
+            exit()
+
+
+
+
 
 
 class ChoiceFunctionLink(object):
@@ -98,8 +135,6 @@ class ChoiceFunctionLink(object):
             test = LinkFunction(self.choice_function_dict[value]).function
             print 'Executing: ', test
             test.execute()
-
-
         else:
             print 'Given Choice option is not in queue'
 
@@ -142,8 +177,10 @@ class LinkFunction(object):
 
 
 
+while (1):
+    Menu('Main Menu', choice_array=["UAV", "Sensors", "Database", "Etc."])
 
-t = Menu('Main Menu', choice_array=["Compute", "Storage", "AWS Monitor", "Elastic Load Balancing"])
+#s = Sub_Menu('Sub Menu', choice_array=["Sub", "Menu"])
 #t._iterate_choices() #Already in __init__(), DON'T CALL MANUALLY ! ! !
 
 new_dict = dict()
@@ -154,15 +191,16 @@ new_dict[3] = 'AWS Monitor'
 new_dict[4] = 'Elastic Load Balancing'
 
 c = ChoiceFunctionLink(new_dict)
-import solo_connect
+from code.PYSITL.Control import solo_connect
 #import MyTestCases as UAVClass
 
 
-c.link_function('Storage', solo_connect.connect().ip, '127.0.0.1', '14550', 5)
-c.link_function('Compute', solo_connect.connect().get_test, 'My Test')
+
+#c.link_function('Storage', solo_connect.connect().ip, '127.0.0.1', '14550', 5)
+#c.link_function('Compute', solo_connect.connect().get_test, 'My Test')
 #c.link_function('Compute', UAVClass.UAV)
-print c.choice_function_dict
+#print c.choice_function_dict
 #c.funtion_excecute('Storage')
-c.funtion_excecute('Compute')
+#c.funtion_excecute('Compute')
 
 

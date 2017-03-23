@@ -30,7 +30,7 @@ class connect:
         except socket.error as e:
             self.__set_message('Error(1): Unable to connect to Server')
             self.__set_exceptions(Exception(e))
-            raise
+            #raise
 
 
         # Bad TTY connection
@@ -38,14 +38,14 @@ class connect:
 
             self.__set_message('Error(2): Unable to connect to serial Port')
             self.__set_exceptions(Exception(e))
-            raise
+            #raise
 
 
         # API Error
         except dronekit.APIException as e:
             self.__set_message('Error(3): MAVLink Connection Timeout')
             self.__set_exceptions(Exception(e))
-            raise
+            #raise
 
 
 
@@ -53,46 +53,11 @@ class connect:
         except:
             self.__set_message('Some other error!')
             self.__set_exceptions('???')
-            raise
+            #raise
 
 
         return vehicle
 
-
-
-
-        '''
-        try:
-            vehicle = dronekit.connect(ip_concat, heartbeat_timeout=timeout)
-
-        # Bad TCP connection
-        except socket.error:
-            self.__set_message('Error(1): Unable to connect to Server')
-            self.__set_exceptions(Exception(socket.error))
-
-
-        # Bad TTY connection
-        except exceptions.OSError as e:
-
-            self.__set_message('Error(2): Unable to connect to serial Port')
-            self.__set_exceptions(Exception(e))
-
-
-        # API Error
-        except dronekit.APIException as e:
-            self.__set_message('Error(3): MAVLink Connection Timeout')
-            self.__set_exceptions(Exception(e))
-
-
-
-        # Other error
-        except:
-            self.__set_message('Some other error!')
-            self.__set_exceptions('???')
-
-
-        return vehicle
-        '''
     def __set_message(self, message):
         self.__message.append(message)
 
