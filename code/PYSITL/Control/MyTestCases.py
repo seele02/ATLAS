@@ -22,14 +22,14 @@ class UAV(object):
         self.timeout= 5
 
     @property
-    def vehicle(self):
+    def singleton_vehicle(self):
         return self._vehicle
 
-    @vehicle.setter
-    def vehicle(self, connection_type):
+    @singleton_vehicle.setter
+    def singleton_vehicle(self, connection_type):
         if connection_type == 'default':
             self.default_setup()
-        self.vehicle = self.get_conn(self.ip, self.port, self.timeout)
+        self.singleton_vehicle = self.get_conn(self.ip, self.port, self.timeout)
 
 
     @property
@@ -58,7 +58,7 @@ class UAV(object):
         assert isinstance(time_in_seconds, int)
         self._veh_timeout = time_in_seconds
 
-    def get_conn(self, ip, port, timeout):
+    def set_conn(self, ip, port, timeout):
         veh_conn = solo_connect()
         try:
             vehicle = veh_conn.ip(ip, port, timeout)
@@ -78,11 +78,17 @@ class UAV(object):
             for i in messages:
                 print 'MESSAGE(',messages.index(i), '): ', i
         if vehicle:
-            return vehicle
+            self._vehicle = vehicle
 
 
+    def conn(self):
+        if (self._veh_ip):
+            if (self._veh_port):
+                if (self._veh_timeout):
+                    self.set_conn(self._veh_ip, self._veh_port, self._veh_timeout)
 
-
+    def get_conn(self):
+        return self._vehicle
 
     @property
     def mode(self):
@@ -91,12 +97,12 @@ class UAV(object):
     @mode.setter
     def mode(self, mode_string):
 
-        if self.vehicle:
-            old_mode = self.vehicle.mode
-            self.vehicle.mode = VehicleMode(str(mode_string))
+        if self.singleton_vehicle:
+            old_mode = self.singleton_vehicle.mode
+            self.singleton_vehicle.mode = VehicleMode(str(mode_string))
             self._mode = VehicleMode(str(mode_string))
-            if self.vehicle.mode == self.mode:
-                if self.vehicle.mode != old_mode:
+            if self.singleton_vehicle.mode == self.mode:
+                if self.singleton_vehicle.mode != old_mode:
                     print 'MODE CHANGED TO', mode_string, ' from ', old_mode.name
             else:
                 print 'WARNING: Mode mismatch'
@@ -108,12 +114,12 @@ class UAV(object):
     def mode_armable(self):
 
 
-        self.vehicle.armed = True
+        self.singleton_vehicle.armed = True
 
 
 
-        if self.vehicle.on_message('Mode not armable'):
-            print self.vehicle.mode.name
+        if self.singleton_vehicle.on_message('Mode not armable'):
+            print self.singleton_vehicle.mode.name
             return False
         else:
             return True
@@ -128,8 +134,8 @@ class UAV(object):
 
 
     def arm_vehicle(self):
-        print 'Armable:', self.vehicle.is_armable
-        print 'Armed: ', self.vehicle.armed
+        print 'Armable:', self.singleton_vehicle.is_armable
+        print 'Armed: ', self.singleton_vehicle.armed
         print 'Mode Armable: ', self.mode_armable()
 
 
@@ -147,34 +153,34 @@ class UAV(object):
 
 
     def test(self):
-        print self.vehicle.mode
-        if self.vehicle:
-            self.vehicle.mode = VehicleMode("GUIDED")
+        print self.singleton_vehicle.mode
+        if self.singleton_vehicle:
+            self.singleton_vehicle.mode = VehicleMode("GUIDED")
 
 
-        print self.vehicle.armed
-        if self.vehicle.armed == True:
+        print self.singleton_vehicle.armed
+        if self.singleton_vehicle.armed == True:
             time.sleep(3)
-            self.vehicle.simple_takeoff(self.height)
+            self.singleton_vehicle.simple_takeoff(self.height)
 
 
         #vehicle.mode == 'LOITER'
 
 
 
-        while self.vehicle.mode == 'GUIDED':
-            aug = (self.vehicle.location._down*-1)/(self.height)
+        while self.singleton_vehicle.mode == 'GUIDED':
+            aug = (self.singleton_vehicle.location._down * -1) / (self.height)
             print 'AUG: ', aug
-            print self.vehicle.mode
-            print self.vehicle.location._down
+            print self.singleton_vehicle.mode
+            print self.singleton_vehicle.location._down
             time.sleep(1)
 
             if aug > 0.99:
                 print '* * * Landing Now * * *: ', aug
 
                 #time.sleep(10)
-                if self.vehicle.mode == VehicleMode("GUIDED"):
-                    self.vehicle.mode = VehicleMode("LAND")
+                if self.singleton_vehicle.mode == VehicleMode("GUIDED"):
+                    self.singleton_vehicle.mode = VehicleMode("LAND")
 
 
 class takeoff():
@@ -188,15 +194,15 @@ class takeoff():
 
 
 
-new_UAV = UAV()
-vehicle = new_UAV.vehicle
+#new_UAV = UAV()
+#vehicle = new_UAV.vehicle
 
-print new_UAV.ip
-print new_UAV.port
-print new_UAV.timeout
+#print new_UAV.ip
+#print new_UAV.port
+#print new_UAV.timeout
 
-new_UAV.mode = vehicle.mode
-print new_UAV
+#new_UAV.mode = vehicle.mode
+#print new_UAV
 #t.start_SITL()
 #vehicle = new_UAV.vehicle
 #cmds = vehicle.commands
