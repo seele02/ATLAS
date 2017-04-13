@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="widthg-device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Deployed Nodes</title>
+
+</head>
+<body>
+<div class="container">
+    <h1>Choose a Node to View</h1>
+    {% for Node in nodes %}
+    <p><a class="btn btn-primary btn-lg" href="{{Node.key}}">{{Node.key}}</a></p>
+</div>
+
+</body>
+</html>
