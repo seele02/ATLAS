@@ -1,11 +1,26 @@
+import time
+
 class MaidFlight(object):
     def __init__(self, sim):
-        '''
-        self.start_long = self.query_value('Starting Longitude', val_type='lon')
-        self.start_lat = self.query_value('Starting Latitude', val_type='lat')
-        self.dest_long = self.query_value('Destination Longitude', val_type='lon')
-        self.dest_lat = self.query_value('Destination Longitude', val_type='lat')
 
+        #self.start_long = self.query_value('Starting Longitude', val_type='lon')
+        #self.start_lat = self.query_value('Starting Latitude', val_type='lat')
+        #self.dest_long = self.query_value('Destination Longitude', val_type='lon')
+        #self.dest_lat = self.query_value('Destination Longitude', val_type='lat')
+
+        self.start_long = float(-8.733519)
+        self.start_lat = float(52.077311)
+        self.dest_long = float(-8.735648)
+        self.dest_lat = float(52.079128)
+
+        self.distance_in_km = self.haversine_GPS_distance_calculator(self.start_lat, self.start_long, self.dest_lat, self.dest_long)
+        self.distance_in_m = self.distance_in_km*1000
+
+
+
+        print self.distance_in_m
+
+        '''
         print self.start_long
         print self.start_lat
         print self.dest_long
@@ -15,7 +30,24 @@ class MaidFlight(object):
 
 
         if sim ==  True:
+            print 'Begin Flight'
             Flight_Start('127.0.0.1', '14550', 5)
+
+    def haversine_GPS_distance_calculator(self, lat1, lon1, lat2,  lon2):
+        from math import radians, cos, sin, asin, sqrt
+        """
+        Calculate the great circle distance between two points
+        on the earth (specified in decimal degrees)
+        """
+        # convert decimal degrees to radians
+        lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+        # haversine formula
+        dlon = lon2 - lon1
+        dlat = lat2 - lat1
+        a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
+        c = 2 * asin(sqrt(a))
+        km = 6367 * c
+        return km
 
 
     def query_value(self, val_string, val_type):
@@ -71,7 +103,9 @@ class Flight_Start(object):
         #vehicle = new_UAV.vehicle
 
         if self.globvehicle:
+            print "Vehicle Connected"
             self.get_telemetry()
+            self.arm_vehicle()
 
 
 
@@ -79,7 +113,7 @@ class Flight_Start(object):
     def get_telemetry(self):
         #dronekit.LocationLocal.__str__()
         new_dict = dict()
-        new_dict['Global Location'] = self.globvehicle.location.global_frame.__str__()
+        new_dict['Global Location'] = [self.globvehicle.location.global_frame.lat, self.globvehicle.location.global_frame.lon, self.globvehicle.location.global_frame.alt]
         new_dict['Local Location'] = self.globvehicle.location.local_frame.__str__()
         new_dict['Attitude'] = self.globvehicle.attitude.__str__()
         new_dict['Velocity'] = self.globvehicle.velocity
@@ -99,7 +133,29 @@ class Flight_Start(object):
         new_dict['Mode'] = self.globvehicle.mode.name
         new_dict['Armed'] = self.globvehicle.armed
 
-        print new_dict
+        print new_dict['Global Location']
+
+
+
+    def arm_vehicle(self):
+        import dronekit
+        from code.PYSITL.Model.Abstract import Flight
+        print self.globvehicle.mode
+        self.globvehicle.mode = dronekit.VehicleMode("GUIDED")
+        #self.globvehicle.mode = dronekit.VehicleMode("AUTO")
+        time.sleep(2)
+        print self.globvehicle.mode
+
+        print self.globvehicle.is_armable
+        print self.globvehicle.armed
+        test = Flight(self.globvehicle)
+        print test.arm_UAV()
+
+
+
+        time.sleep(1)
+
+        #self.globvehicle.simple_takeoff(35)
 
 
 

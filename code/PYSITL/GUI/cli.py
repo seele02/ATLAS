@@ -3,6 +3,9 @@ Description: Displays choices generated from array of sting args
 '''
 from code.PYSITL import Singleton
 
+menu_array = []
+
+
 class Menu(object):
     def __init__(self, banner, choice_array):
         self._set_choice_array(choice_array)
@@ -20,7 +23,9 @@ class Menu(object):
         print '[ USER CHOICE: ', self.choice, ' ]'
 
         if (self.choice == 1):
-            s = Sub_Menu("UAV", choice_array=["Get Home Location", "Telemetry", "Database", "Etc."])
+
+            s = Sub_Menu("UAV", choice_array=["Get Home Location", "Telemetry", "Database", "Etc."], parent_menu=self)
+            menu_array.append(s)
 
     def add_sing(self, single):
         if not self.single:
@@ -88,9 +93,9 @@ class Menu(object):
 
 
 class Sub_Menu(Menu):
-    def __init__(self, banner, choice_array):
+    def __init__(self, banner, choice_array, parent_menu):
         super(Sub_Menu, self).__init__(banner, choice_array)
-        #self.parent_menu = parent_menu
+        self.parent_menu = parent_menu
         self.set_choice_numbering()
         self._set_zero_val()
 
@@ -102,7 +107,12 @@ class Sub_Menu(Menu):
     def _set_zero_val(self):
         if int(self.choice) == 0:
             print '[ Go Back ]'
-            exit()
+            #print 'Menu array: ', menu_array
+            #print len(menu_array)
+            #self.go_to_previous(parent_menu=self.parent_menu)
+
+
+
 
 
 
@@ -178,7 +188,8 @@ class LinkFunction(object):
 
 
 while (1):
-    Menu('Main Menu', choice_array=["UAV", "Sensors", "Database", "Etc."])
+    menu_array.append(Menu('Main Menu', choice_array=["UAV", "Sensors", "Database", "Etc."]))
+    print 'Menu array: ', menu_array
 
 #s = Sub_Menu('Sub Menu', choice_array=["Sub", "Menu"])
 #t._iterate_choices() #Already in __init__(), DON'T CALL MANUALLY ! ! !
@@ -191,7 +202,7 @@ new_dict[3] = 'AWS Monitor'
 new_dict[4] = 'Elastic Load Balancing'
 
 c = ChoiceFunctionLink(new_dict)
-from code.PYSITL.Control import solo_connect
+from code.PYSITL.Control import solo1_connect
 #import MyTestCases as UAVClass
 
 

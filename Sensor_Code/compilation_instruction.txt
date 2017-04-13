@@ -1,0 +1,8 @@
+#Compile TempTest
+1. cd into TempTest/src
+2. make telosb
+
+#Upload to Module
+1. cd into TempTest/src
+2. make telosb install <USBSerialLocation> e.g "/dev/ttyUSB0"
+

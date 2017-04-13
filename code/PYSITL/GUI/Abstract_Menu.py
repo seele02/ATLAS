@@ -3,6 +3,9 @@ import dronekit
 
 global globvehicle
 
+def get_vehicle():
+    pass
+
 class Menu(object):
     def __init__(self, banner, choice_array):
         self._set_choice_array(choice_array)
@@ -130,11 +133,14 @@ def sub_menu_UAV():
             from code.PYSITL.Control import solo_connect
             c = solo_connect.connect().ip('127.0.0.1', '14550', 5)
             if c:
-
                 globvehicle = c
                 th = threading.Thread(target=threadFunc)
                 th.daemon = True
-                #th.start()
+                th.start()
+                print "Daemon Started"
+                print "Glob Vehicle Param set as: ", globvehicle
+            else:
+                print "Error: Connection failed"
             #c = threading.Thread(target=solo_connect.connect().ip('127.0.0.1', '14550', 5))
             #c.start()
         elif choice == 2:
@@ -176,14 +182,14 @@ def sub_menu_UAV():
                         print 'Home: ', globvehicle.home_location
 
                 except UnboundLocalError:
-                    print 'Make sure you have connected to the UAV first'
+                    print '[Unbound Local Error]: No Connection \nMake sure you have connected to the UAV first'
                 except TypeError:
                     print 'Type Error'
                 except dronekit.APIException:
                     print 'UAV Exception'
-                    raise
+
                 except NameError:
-                    print 'Make sure you have connected to the UAV first'
+                    print '[Name Error]: No Connection \nMake sure you have connected to the UAV first'
         elif choice == 3:
             sub_menu_UAV_Mission_Generation()
 
@@ -259,6 +265,7 @@ def threadFunc():
     while True:
         time.sleep(10)
         global globvehicle
+        print "\nLast Heartbeat: %s" % globvehicle.last_heartbeat
         print globvehicle
 
 

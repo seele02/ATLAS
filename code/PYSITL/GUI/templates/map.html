@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Node on Map</title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript">
+    function initMap() {
+        var latLong = {lat: {{Node.lat}}, lng: {{Node.long}}};
+        var nodeList = [{{Nodes}}];
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: latLong,
+            zoom: 16
+        });
+
+        var marker = new google.maps.Marker({
+            position: latLong,
+            map: map,
+            title: '{{Node.name}}'
+        });
+    }
+    </script>
+
 </head>
-<body>
-$END$
+
+<body onload="initMap()">
+<div>
+    <h1>{{Node.name}}, Node</h1>
+    <div id="map" style="width:90%; height:500px;"></div>
+</div>
 </body>
 </html>
