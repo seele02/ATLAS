@@ -1,0 +1,10 @@
+configuration TempTestAppC{
+	
+}
+
+
+implementation{
+	//General components
+	components TempTestC as App;
+		
+}

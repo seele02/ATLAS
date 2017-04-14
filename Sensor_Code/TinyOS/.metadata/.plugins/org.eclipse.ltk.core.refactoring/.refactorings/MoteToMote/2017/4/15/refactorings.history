@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;MoteToMote/src/UserButtonTestC.nc&apos; to &apos;MoteToMoteC.nc&apos;" description="Rename resource &apos;UserButtonTestC.nc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/UserButtonTestC.nc" name="MoteToMoteC.nc" stamp="1492104400952" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;MoteToMote/src/UserButtonTestAppC.nc&apos; to &apos;MoteToMoteAppC.nc&apos;" description="Rename resource &apos;UserButtonTestAppC.nc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/UserButtonTestAppC.nc" name="MoteToMoteAppC.nc" stamp="1492104423779" updateReferences="true"/>
+</session>

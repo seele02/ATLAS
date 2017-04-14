@@ -1,0 +1,11 @@
+module TempTestC{
+	uses{
+		
+		
+	}
+}
+
+
+implementation{
+	
+}

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="23" version="2.0">
+<workbenchAdvisor/>
+<window height="769" maximized="true" width="1018" x="436" y="27">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="160" y="38"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="174" y="38"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="70" y="38"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="78" y="38"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="256" y="38"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="tinyos.ui.editor.nesc" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1492012229203" focus="true" label="Workspace - TinyOS">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="3"/>
+<part id="4"/>
+<part id="2"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="tinyos.ui.editor.nesc" name="BlinkAppC.nc" partName="BlinkAppC.nc" path="/home/cormac/CODE/IOT/TinyOS/Blink/src/BlinkAppC.nc" title="BlinkAppC.nc" tooltip="Blink/src/BlinkAppC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Blink/src/BlinkAppC.nc"/>
+</editor>
+<editor id="tinyos.ui.editor.nesc" name="SenseAppC.nc" partName="SenseAppC.nc" path="/home/cormac/CODE/IOT/TinyOS/Sense_test_01/src/SenseAppC.nc" title="SenseAppC.nc" tooltip="Sense_test_01/src/SenseAppC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Sense_test_01/src/SenseAppC.nc"/>
+</editor>
+<editor id="tinyos.ui.editor.nesc" name="TempTestC.nc" partName="TempTestC.nc" path="/home/cormac/CODE/IOT/TinyOS/TempTest/src/TempTestC.nc" title="TempTestC.nc" tooltip="TempTest/src/TempTestC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TempTest/src/TempTestC.nc"/>
+</editor>
+<editor id="tinyos.ui.editor.nesc" name="SenseC.nc" partName="SenseC.nc" path="/home/cormac/CODE/IOT/TinyOS/Sense_test_01/src/SenseC.nc" title="SenseC.nc" tooltip="Sense_test_01/src/SenseC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Sense_test_01/src/SenseC.nc"/>
+</editor>
+<editor id="tinyos.ui.editor.nesc" name="TempTestAppC.nc" partName="TempTestAppC.nc" path="/home/cormac/CODE/IOT/TinyOS/TempTest/src/TempTestAppC.nc" title="TempTestAppC.nc" tooltip="TempTest/src/TempTestAppC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TempTest/src/TempTestAppC.nc"/>
+</editor>
+<editor id="org.eclipse.ui.DefaultTextEditor" name="Makefile" partName="Makefile" path="/home/cormac/CODE/IOT/TinyOS/TempTest/src/Makefile" title="Makefile" tooltip="TempTest/src/Makefile" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TempTest/src/Makefile"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="78" selectionTopPixel="0"/>
+</editor>
+<editor id="tinyos.ui.editor.nesc" name="OscilloscopeAppC.nc" partName="OscilloscopeAppC.nc" path="/home/cormac/CODE/IOT/TinyOS/OscilloscopeTest/src/OscilloscopeAppC.nc" title="OscilloscopeAppC.nc" tooltip="OscilloscopeTest/src/OscilloscopeAppC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OscilloscopeTest/src/OscilloscopeAppC.nc"/>
+</editor>
+<editor id="tinyos.ui.editor.nesc" name="OscilloscopeC.nc" partName="OscilloscopeC.nc" path="/home/cormac/CODE/IOT/TinyOS/OscilloscopeTest/src/OscilloscopeC.nc" title="OscilloscopeC.nc" tooltip="OscilloscopeTest/src/OscilloscopeC.nc" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OscilloscopeTest/src/OscilloscopeC.nc"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="Makefile" partName="Makefile" path="/home/cormac/CODE/IOT/TinyOS/OscilloscopeTest/src/Makefile" title="Makefile" tooltip="OscilloscopeTest/src/Makefile" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OscilloscopeTest/src/Makefile"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="TinyOS.view.makeOptions" partName="Make Options">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<customFilters userDefinedPatternsEnabled="false">
+<xmlDefinedFilters>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="tinyos.perspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.internal.introview"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@51671b08" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.internal.introview" appearance="2" expanded="1">&#x0A;<page content="org.eclipse.ui.internal.introview" label="Welcome"/>
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.65967745" ratioLeft="409" ratioRight="211" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="310" ratioRight="310" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="tinyos.yeti.perspective.PerspectiveFactory" id="tinyos.perspective" label="TinyOS"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="tinyos.menuActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="TinyOS.view.makeOptions"/>
+<show_view_action id="TinyOS.view.thumbnail"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<new_wizard_action id="tinyos.wizards.header"/>
+<new_wizard_action id="tinyos.wizards.interface"/>
+<new_wizard_action id="tinyos.wizards.module"/>
+<new_wizard_action id="tinyos.wizards.configuration"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="TinyOS.view.makeOptions"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bott" orientation="256" selectedTabId="org.eclipse.ui.views.ProblemView" style="0">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="TinyOS.view.interfaces" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2c18a3ea" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.19979079" ratioLeft="382" ratioRight="1530" relationship="2" relative="left"/>
+<info folder="true" part="right" ratio="0.7496732" ratioLeft="1147" ratioRight="383" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="rightb" ratio="0.6996839" ratioLeft="664" ratioRight="285" relationship="4" relative="right">
+<folder activePageID="TinyOS.view.makeOptions" appearance="2" expanded="2">
+<page content="TinyOS.view.makeOptions" label="Make Options"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bott" ratio="0.7347392" ratioLeft="662" ratioRight="239" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" path="/TempTest/src/TempTestC.nc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" path="/TempTest/src/TempTestAppC.nc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" path="/OscilloscopeTest/src/OscilloscopeAppC.nc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" path="/OscilloscopeTest/src/OscilloscopeC.nc"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="tinyos.ui.editor.nesc" uri="file:/opt/tinyos-main/apps/BaseStation/BaseStationC.nc"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="tinyos.ui.editor.nesc" uri="file:/opt/tinyos-main/apps/BaseStation/BaseStationP.nc"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/TempTest/src/Makefile"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/OscilloscopeTest/src/Makefile"/>
+</editors>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="BaseStationC.nc" index="4"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="BaseStationP.nc" index="5"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="OscilloscopeC.nc" index="3"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="TempTestC.nc" index="0"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="TempTestAppC.nc" index="1"/>
+<item historyLabel="OscilloscopeAppC.nc" index="2"/>
+<item historyLabel="Makefile" index="6">
+<position info="not_deleted" x="78" y="0"/>
+</item>
+<item active="true" historyLabel="Makefile" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="rightb"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bott"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Makefile" tooltip="OscilloscopeTest/src/Makefile">
+<persistable path="/OscilloscopeTest/src/Makefile"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="tinyos.ui.editor.nesc" name="BaseStationP.nc" tooltip="/opt/tinyos-main/apps/BaseStation/BaseStationP.nc">
+<persistable uri="file:/opt/tinyos-main/apps/BaseStation/BaseStationP.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="tinyos.ui.editor.nesc" name="BaseStationC.nc" tooltip="/opt/tinyos-main/apps/BaseStation/BaseStationC.nc">
+<persistable uri="file:/opt/tinyos-main/apps/BaseStation/BaseStationC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="OscilloscopeC.nc" tooltip="OscilloscopeTest/src/OscilloscopeC.nc">
+<persistable path="/OscilloscopeTest/src/OscilloscopeC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="OscilloscopeAppC.nc" tooltip="OscilloscopeTest/src/OscilloscopeAppC.nc">
+<persistable path="/OscilloscopeTest/src/OscilloscopeAppC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="oscilloscope.py" tooltip="OscilloscopeTest/src/oscilloscope.py">
+<persistable path="/OscilloscopeTest/src/oscilloscope.py"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Makefile" tooltip="TempTest/src/Makefile">
+<persistable path="/TempTest/src/Makefile"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="TempTestAppC.nc" tooltip="TempTest/src/TempTestAppC.nc">
+<persistable path="/TempTest/src/TempTestAppC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="SenseC.nc" tooltip="Sense_test_01/src/SenseC.nc">
+<persistable path="/Sense_test_01/src/SenseC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="TempTestC.nc" tooltip="TempTest/src/TempTestC.nc">
+<persistable path="/TempTest/src/TempTestC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="SenseAppC.nc" tooltip="Sense_test_01/src/SenseAppC.nc">
+<persistable path="/Sense_test_01/src/SenseAppC.nc"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="tinyos.ui.editor.nesc" name="BlinkAppC.nc" tooltip="Blink/src/BlinkAppC.nc">
+<persistable path="/Blink/src/BlinkAppC.nc"/>
+</file>
+</mruList>
+</workbench>

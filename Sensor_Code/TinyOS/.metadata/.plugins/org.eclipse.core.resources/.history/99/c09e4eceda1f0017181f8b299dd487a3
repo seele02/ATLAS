@@ -1,0 +1,32 @@
+module TempTestC{
+	uses{
+		
+		//General Interfaces
+		interface Boot;
+		interface Timer<TMilli>;
+		interface Leds;
+		
+		//Read
+		interface Read<uint16_t> as TempRead;
+		
+	}
+}
+
+
+implementation{
+	
+
+	event void Boot.booted(){
+		call Timer.startPeriodic(1000);
+		call Leds.led0On();
+		
+	}
+
+	event void Timer.fired(){
+		call TempRead.read();
+	}
+
+	event void TempRead.readDone(error_t result, uint16_t val){
+		// TODO Auto-generated method stub
+	}
+}

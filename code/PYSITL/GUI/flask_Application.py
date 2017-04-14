@@ -18,8 +18,8 @@ class Node:
 
 
 Nodes = {
-    Node("My Name 1", 1, 51.8856654, -8.5466063),
-    Node("My Name 2", 2, 51.8859336, -8.5495246),
+    Node("(Sample) Temp Node", 1, 51.8856654, -8.5466063),
+    Node("(Sample) Humidity Node", 2, 51.8859336, -8.5495246),
 }
 nodes_by_num = {Node.key: Node for Node in Nodes}
 
@@ -30,16 +30,11 @@ def index():
 
 @app.route('/<node_num>')
 def show_node(node_num):
-    Node = nodes_by_num.get(node_num)
-    print Node
-    Node_List = [Node for Node in Nodes]
-    Node_List_lat = [Node.lat for Node in Node_List]
-    Node_List_long = [Node.long for Node in Node_List]
-    print Node_List_lat
-    print Node_List_long
+    MyNode = nodes_by_num.get(node_num)
+    print MyNode
 
     if Node:
-        return render_template('map.html', Node=Node, Nodes=Node_List)
+        return render_template('map.html', Node=MyNode)
     else:
         abort(404)
     return '<h2>Tuna is good</h2>'

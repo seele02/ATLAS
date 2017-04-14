@@ -1,0 +1,27 @@
+configuration MoteToMoteAppC{
+	//Not used now
+	
+}
+
+
+implementation{
+	
+	components MoteToMoteC as App; //Name of ModFile
+	components MainC; //Boot Interface
+	components LedsC;
+	
+	App.Boot -> MainC;	
+	App.Leds -> LedsC;
+	
+	components UserButtonC;
+	App.Get -> UserButtonC;
+	App.Notify -> UserButtonC;
+	
+	components SerialPrintfC;
+	
+	//radio comps
+	components ActiveMessageC;
+	components new AMSenderC(AM_RADIO);
+	components new AMReceiverC(AM_RADIO);
+	
+}

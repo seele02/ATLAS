@@ -1,0 +1,18 @@
+configuration UserButtonTestAppC{
+	//Not used now
+	
+}
+
+
+implementation{
+	
+	components UserButtontestC as App; //Name of ModFile
+	components MainC; //Boot Interface
+	components LedsC;
+	
+	App.Boot -> MainC;	
+	App.Leds -> LedsC;
+	
+	App.Get -> UserButtonC;
+	App.Notify -> UserButtonC;
+}

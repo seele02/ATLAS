@@ -1,0 +1,24 @@
+#include<UserButton.h>
+
+module UserButtontestC {
+	uses {
+		interface Boot;
+		interface Leds;
+	}
+	uses {	
+		//User Button
+		interface Get<button_state_t>;
+		interface Notify<button_state_t>;
+	}
+}
+
+implementation {
+
+	event void Boot.booted(){
+		// TODO Auto-generated method stub
+	}
+
+	event void Notify.notify(button_state_t val){
+		// TODO Auto-generated method stub
+	}
+}

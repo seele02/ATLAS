@@ -1,0 +1,18 @@
+module TempTestC{
+	uses{
+		
+		//General Interfaces
+		interface Boot;
+		interface Timer<TMilli>;
+		interface Leds;
+		
+		//Read
+		interface Read<uint16_t> as TempRead;
+		
+	}
+}
+
+
+implementation{
+	
+}

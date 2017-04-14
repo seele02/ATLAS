@@ -1,0 +1,10 @@
+module UserButtontestC {
+	uses {
+		interface Boot;
+		interface leds;
+	}
+}
+
+implementation {
+
+}
